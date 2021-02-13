@@ -1,0 +1,30 @@
+{
+  "name": "iPortfolio",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paveldarii/employment-ready-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paveldarii/employment-ready-portfolio/issues"
+  },
+  "homepage": "https://github.com/paveldarii/employment-ready-portfolio#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mailgun": "^0.5.0",
+    "mailgun-js": "^0.22.0",
+    "mysql2": "^2.2.5",
+    "path": "^0.12.7",
+    "sequelize": "^6.5.0"
+  }
+}
