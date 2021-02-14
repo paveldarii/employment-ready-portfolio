@@ -1,7 +1,7 @@
 // Creating our Equipment model
 
 module.exports = function (sequelize, DataTypes) {
-  const Equipment = sequelize.define("Equipment", {
+  const Equipment = sequelize.define("Form", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
