@@ -150,7 +150,6 @@
           });
       });
     } else {
-      console.log(this_form.serialize());
       php_email_form_submit(this_form, action, body);
     }
 
@@ -165,7 +164,7 @@
       timeout: 40000,
     })
       .done(function (msg) {
-        if (msg.id) {
+        if (msg) {
           this_form.find(".loading").slideUp();
           this_form.find(".sent-message").slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val("");
@@ -181,7 +180,6 @@
         }
       })
       .fail(function (data) {
-        console.log(data);
         var error_msg = "Form submission failed!<br>";
         if (data.statusText || data.status) {
           error_msg += "Status:";
