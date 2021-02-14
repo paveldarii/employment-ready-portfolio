@@ -6,16 +6,16 @@ module.exports = function (app) {
 Email: ${req.body.email}
 Text: ${req.body.text}`;
     const data = {
-      from: "paveldarii@sandbox6ac30a2488d74e6d9daae7e2dc76777f.mailgun.org",
+      from: process.env.mailgun_from_address,
       to: "paveldarii@yahoo.com",
       subject: req.body.subject,
       text: emailContent,
     };
     console.log(data);
-    const DOMAIN = "sandbox6ac30a2488d74e6d9daae7e2dc76777f.mailgun.org";
+    const DOMAIN = process.env.mailgun_domain;
     console.log(DOMAIN);
     const mg = mailgun({
-      apiKey: "eb7771d76b71a763ead0a621ee73c262-07bc7b05-baa1c8a5",
+      apiKey: process.env.mailgun_api_key,
       domain: DOMAIN,
     });
 
