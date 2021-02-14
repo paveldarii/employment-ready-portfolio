@@ -2,14 +2,16 @@ const db = require("../models");
 const mailgun = require("mailgun-js");
 module.exports = function (app) {
   app.post("/api/send_email", (req, res) => {
+    emailContent = `Name: ${req.body.name}
+Email: ${req.body.email}
+Text: ${req.body.text}`;
     const data = {
       from: process.env.mailgun_from_address,
-      to: req.user.email,
+      to: "paveldarii@yahoo.com",
       subject: req.body.subject,
-      text: req.body.body,
+      text: emailContent,
     };
-
-    //console.log(data);
+    console.log(data);
     const DOMAIN = process.env.mailgun_domain;
     console.log(DOMAIN);
     const mg = mailgun({
